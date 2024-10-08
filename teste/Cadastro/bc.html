@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bc.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo1.png">
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-storage-compat.js"></script>
+    <script src="bc.js"></script>
+
+    <title>Cadastro de Produtos </title>
+</head>
+<body>
+    <main class="m_NAV">
+        <div class="nav">
+            <div class="navlogo">
+                <div class="logo">
+                    <a href="../../index.html"><img class="imglogo" src="../../imagens/8-removebg-preview.png"></a>
+                </div>
+                <h1>   MONSTERZILLA</h1>
+            </div>
+            <div class="navigation">
+                <a class='a1' href="../../index.html">Loja</a>
+                <a class='a1' href="carinho/carinho.html">Carrinho</a>
+                <a class='a1' href="#novidades">Novidades</a>
+                <a class='a1' href="teste/caixa.html">Conta</a>
+            </div>
+            <div class="pesquisa">
+                <button id="rock"></button>
+                <input class="input_pes" type="text" placeholder="Pesquisar" />
+            </div>
+            <div class="global">
+                <a id='a' class="a3" href="../"></a>
+            </div>
+        </div>
+    </main>
+    <div class="box_bc">
+        <div class="box_cadastro">
+
+            <h2 class="title">Cadastro</h2>
+            <label>ID</label>
+            <input id='id'>
+        
+            <label>Nome do Produto</label>
+            <input id="nome">
+        
+            <label>valor</label>
+            <input type="number" id="valor">
+        
+            <label>Descrição</label>
+            <textarea id="desc"></textarea>
+        
+            <label>Imagem</label>
+            <input type="file" accept="image/png, image/jpeg" id="foto">
+        
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+        <div class="box_pesquisa">
+            
+            <h2 class="title">Pesquisar e Alterar</h2>
+            <label>ID</label>
+            <input id='id_p'>
+        
+            <label>Nome do Suplementos</label>
+            <input id="nome_p">
+        
+            <label>valor</label>
+            <input type="number" id="valor_p">
+        
+            <label>Descrição</label>
+            <textarea id="desc_p"></textarea>
+        
+            <label>Imagem</label>
+            <div id="image">
+                <img id="img">
+            </div>
+            
+            <div class="button_container">
+                <button onclick="pesquisar()">Pesquisar</button>
+                <button onclick="alterar()">Alterar</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <footer class="footer">
+        </div>
+                <p>© MONSTERZILLA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
